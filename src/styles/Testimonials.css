@@ -97,8 +97,8 @@
 }
 
 .carousel-button {
-  background: var(--background-light);
-  border: 1px solid var(--border);
+  background: rgba(20, 20, 31, 0.7);
+  border: 2px solid var(--primary);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -107,36 +107,85 @@
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: var(--primary);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+.arrow-left,
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow-left {
+  border-width: 10px 15px 10px 0;
+  border-color: transparent var(--primary) transparent transparent;
+}
+
+.arrow-right {
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent var(--primary);
 }
 
 .carousel-button:hover {
   background: var(--primary);
   transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.5);
+}
+
+.carousel-button:hover .arrow-left {
+  border-color: transparent white transparent transparent;
+}
+
+.carousel-button:hover .arrow-right {
+  border-color: transparent transparent transparent white;
 }
 
 .carousel-dots {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 40px;
+  align-items: center;
+  gap: 4px;
+  margin-top: 30px;
+  position: relative;
+  padding: 5px 0;
+}
+
+.carousel-dots::before {
+  content: '';
+  position: absolute;
+  height: 0.5px;
+  width: 40px;
+  background: rgba(108, 99, 255, 0.08);
+  border-radius: 1px;
+  z-index: 0;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--text-light);
-  opacity: 0.3;
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.05);
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.dot:hover {
+  background: rgba(108, 99, 255, 0.15);
+  opacity: 0.7;
 }
 
 .dot.active {
-  opacity: 1;
-  background: var(--primary);
-  transform: scale(1.2);
+  background: rgba(108, 99, 255, 0.5);
+  width: 18px;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -144,26 +193,47 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .testimonial-card {
     padding: 30px;
   }
-  
+
   .testimonial-text {
     font-size: 1rem;
   }
-  
+
   .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+    background: rgba(20, 20, 31, 0.5);
   }
-  
+
+  .arrow-left {
+    border-width: 6px 10px 6px 0;
+  }
+
+  .arrow-right {
+    border-width: 6px 0 6px 10px;
+  }
+
   .carousel-button.prev {
     left: 10px;
   }
-  
+
   .carousel-button.next {
     right: 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 1.5px;
+  }
+
+  .dot.active {
+    width: 14px;
   }
 }

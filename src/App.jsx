@@ -8,6 +8,9 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import DX4MiniPage from './pages/DX4MiniPage';
+import DX4MPage from './pages/DX4MPage';
+import DX6MPage from './pages/DX6MPage';
 
 function App() {
   const location = useLocation();
@@ -25,6 +28,9 @@ function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/blog/:id" element={<BlogPostPage />} />
+      <Route path="/products/dx4-mini" element={<DX4MiniPage />} />
+      <Route path="/products/dx4-m" element={<DX4MPage />} />
+      <Route path="/products/dx6-m" element={<DX6MPage />} />
     </Routes>
   );
 }

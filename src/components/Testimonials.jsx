@@ -80,8 +80,8 @@ const Testimonials = () => {
             visible: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.6 } }
           }}
         >
-          <button className="carousel-button prev" onClick={prevSlide}>
-            <CaretLeft size={24} weight="light" />
+          <button className="carousel-button prev" onClick={prevSlide} aria-label="Previous testimonial">
+            <div className="arrow-left"></div>
           </button>
 
           <div className="testimonial-card">
@@ -105,8 +105,8 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <button className="carousel-button next" onClick={nextSlide}>
-            <CaretRight size={24} weight="light" />
+          <button className="carousel-button next" onClick={nextSlide} aria-label="Next testimonial">
+            <div className="arrow-right"></div>
           </button>
         </motion.div>
 

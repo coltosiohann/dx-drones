@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import Spline from '@splinetool/react-spline';
 import '../styles/Hero.css';
 
@@ -32,8 +33,9 @@ const Hero = () => {
             Experience unparalleled precision and control with our cutting-edge drone systems designed for professionals and enthusiasts alike.
           </p>
 
-          <div>
-            <a href="#pricing" className="button hero-button">Get Started</a>
+          <div className="hero-buttons">
+            <Link to="#pricing" className="button hero-button">View All Drones</Link>
+            <Link to="/products/dx4-m" className="button hero-button secondary">Explore Popular Model</Link>
           </div>
         </div>
       </div>

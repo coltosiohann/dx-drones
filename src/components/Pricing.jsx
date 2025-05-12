@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { Check } from '@phosphor-icons/react';
+import { Link } from 'react-router-dom';
 import '../styles/Pricing.css';
 
 const Pricing = () => {
@@ -120,7 +121,18 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <a href="#contact" className="button plan-button">Get Started</a>
+              <Link
+                to={
+                  plan.name === 'DX4-Mini'
+                    ? '/products/dx4-mini'
+                    : plan.name === 'DX4-M'
+                      ? '/products/dx4-m'
+                      : '/products/dx6-m'
+                }
+                className="button plan-button"
+              >
+                Get Started
+              </Link>
             </motion.div>
           ))}
         </div>
