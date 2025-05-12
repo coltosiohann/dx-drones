@@ -1,0 +1,18 @@
+Create the following image files in this directory:
+
+1. dx4-mini.jpg - Main product image for DX4-Mini drone
+2. dx4-mini-action1.jpg - DX4-Mini in action (scene 1)
+3. dx4-mini-action2.jpg - DX4-Mini in action (scene 2)
+4. dx4-mini-action3.jpg - DX4-Mini in action (scene 3)
+
+5. dx4-m.jpg - Main product image for DX4-M drone
+6. dx4-m-action1.jpg - DX4-M in action (scene 1)
+7. dx4-m-action2.jpg - DX4-M in action (scene 2)
+8. dx4-m-action3.jpg - DX4-M in action (scene 3)
+
+9. dx6-m.jpg - Main product image for DX6-M drone
+10. dx6-m-action1.jpg - DX6-M in action (scene 1)
+11. dx6-m-action2.jpg - DX6-M in action (scene 2)
+12. dx6-m-action3.jpg - DX6-M in action (scene 3)
+
+These images should be high-quality drone product photos and action shots that match the descriptions in the product pages.
