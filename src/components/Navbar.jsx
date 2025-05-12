@@ -31,7 +31,6 @@ const Navbar = () => {
 
         <div className="desktop-menu">
           <a href="#hero" className="nav-link">Home</a>
-          <a href="#featured" className="nav-link">Featured</a>
           <a href="#how-it-works" className="nav-link">How It Works</a>
           <a href="#features" className="nav-link">Features</a>
           <a href="#mission" className="nav-link">Mission</a>
@@ -60,7 +59,6 @@ const Navbar = () => {
               </div>
               <div className="mobile-menu-links">
                 <a href="#hero" className="nav-link" onClick={toggleMenu}>Home</a>
-                <a href="#featured" className="nav-link" onClick={toggleMenu}>Featured</a>
                 <a href="#how-it-works" className="nav-link" onClick={toggleMenu}>How It Works</a>
                 <a href="#features" className="nav-link" onClick={toggleMenu}>Features</a>
                 <a href="#mission" className="nav-link" onClick={toggleMenu}>Mission</a>

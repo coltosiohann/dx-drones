@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import Featured from '../components/Featured';
 import Testimonials from '../components/Testimonials';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
@@ -19,7 +18,7 @@ const HomePage = () => {
         const elementTop = element.getBoundingClientRect().top;
         const elementBottom = element.getBoundingClientRect().bottom;
         const isVisible = (elementTop < window.innerHeight - 100) && (elementBottom > 0);
-        
+
         if (isVisible) {
           element.classList.add('visible');
         }
@@ -29,7 +28,7 @@ const HomePage = () => {
     window.addEventListener('scroll', handleScroll);
     // Initial check
     handleScroll();
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,7 +36,6 @@ const HomePage = () => {
     <div className="home-page">
       <Navbar />
       <Hero />
-      <Featured />
       <Testimonials />
       <HowItWorks />
       <Features />
